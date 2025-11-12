@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root {
+  --black: #191A23;
+  --black-600: #101115;
+  --green: #B9FF66;
+  --typo-900: #191A23;
+  --typo-700: #2E2F38;
+  --typo-600: #52535B;
+  --typo-200: #E6E6E6;
+  --surface: #FFFFFF;
+  --background: #F3F3F3;
+}
+body {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: var(--background);
+    color: var(--typo-900);
+}
+@media (min-width: 1400px){
+.container { max-width: 1200px; }
+}

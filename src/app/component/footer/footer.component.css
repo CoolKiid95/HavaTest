@@ -1,0 +1,50 @@
+.footer-dark{
+  background: var(--black);
+  border-radius: 26px 26px 0 0;
+  color: #fff;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.navbar-brand{
+  color: white;
+  font-weight: 400;
+  font-size: 30px;
+}
+.nav-item{
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.nav-item:hover{
+  color: var(--green);
+}
+.logo{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color:white;
+  gap: 10px;
+}
+.contact{
+  background: var(--green);
+  color: var(--black);
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 6px 10px;
+  width: fit-content;
+}
+.newsletter{
+  background: #2A2B33;
+  border: 1px solid var(--typo-600);
+  border-radius: 14px;
+  height: 100px;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+button{
+  background: var(--green);
+  color: var(--black);
+  border: none;
+}

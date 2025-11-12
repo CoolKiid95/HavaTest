@@ -1,15 +1,11 @@
-<section id="contact" class="py-5 bg-light">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-12 col-lg-6">
+<section id="contact" class="py-5">
+  <div class="container ">
+    <div class="d-flex align-items-baseline gap-3 mb-3">
         <h2 class="h3 fw-bold mb-2">Contactanos</h2>
         <p class="text-secondary">Envianos un mensage y te contactaremos en breve</p>
-        @if (sent){
-          <div class="alert alert-success" role="status">Mensaje enviado! Te contactaremos pronto</div>
-        }
-      </div>
-      <div class="col-12 col-lg-6">
-        <form class="needs-validation" [formGroup]="form" novalidate (ngSubmit)="submit()" >
+    </div>
+    <div class="contact-panel">
+      <form class="contact-form needs-validation" [formGroup]="form" novalidate (ngSubmit)="submit()" >
           <div class="mb-3">
             <label for="name" class="form-label">Nombre</label>
             <input id="name" type="text" class="form-control" formControlName="name" required>
@@ -34,9 +30,19 @@
             }
           </div>
 
-          <button class="btn btn-primary" type="submit">Enviar</button>
-        </form>
+          <button class="btn" type="submit">Enviar</button>
+          <div class="">
+
+        @if (sent){
+          <div class="alert alert-success" role="status">Mensaje enviado! Te contactaremos pronto</div>
+        }
       </div>
+      </form>
+      <div class="contact-illustration" aria-hidden="true">
+        <img src="assets/form.png" alt="illustration">
+      </div>
+
     </div>
+
   </div>
 </section>

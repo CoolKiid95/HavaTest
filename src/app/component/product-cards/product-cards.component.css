@@ -1,0 +1,17 @@
+.card{
+  border: 1px solid var(--typo-200);
+  border-radius: 16px;
+  box-shadow:0 8px 28px rgba(25, 26, 35, 0.08) ;
+  background: var(--surface);
+}
+img{
+  border-radius:16px ;
+}
+h3{
+  font-weight: 700;
+  font-size: 20px;
+}
+.card:hover{
+  color: var(--green);
+  box-shadow:2 10px 30px rgba(25, 26, 35, 0.08)
+}
