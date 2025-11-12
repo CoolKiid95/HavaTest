@@ -1,0 +1,16 @@
+<article class="card h-100 shadow-sm" tabindex="0" aria-label="Producto">
+  <div class="ratio ratio-1x1 bg-light">
+    <img src="{{product?.image}}" alt="{{product?.title}} || 'Producto'" class="img-fluid object-fit-contain p-3" width="600" height="600" loading="lazy" (error)="onImgError($event)">
+  </div>
+  <div class="card-body d-flex flex-column gap-2">
+    <h3 class="card-title h6 mb-1 text-truncate" [title]="product?.title">
+      {{product?.title}}
+    </h3>
+    <p class="mb-2 text-secondary small">
+      {{product?.category||'General'}}
+    </p>
+    <div>
+      {{product?.price | currency:'USD':'symbol'}}
+    </div>
+  </div>
+</article>

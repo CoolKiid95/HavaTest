@@ -1,0 +1,7 @@
+<form class="container py-2" (submit)="onSubmit($event)" role="search" aria-label="Buscar productos">
+  <div class="input-group">
+    <span class="input-group-text" id="search-addon" aria-hidden="true">🔎</span>
+    <input type="search" class="form-control" placeholder="Buscar por título o categoría" aria-describedby="search-addon" [formControl]="search">
+    <button type="button" class="btn-outline-secondary" (click)="clear()" [disabled]="!search.value">Limpiar</button>
+  </div>
+</form>

@@ -1,0 +1,50 @@
+<footer class="py-4 border-top bg-light">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-3">
+      <a class="navbar-brand fw-bold" href="#">HavaCommerce</a>
+      <ul class="nav small align-items-center gap-3">
+        <li class="nav-item"><a class="nav-link px-2 text-secondary" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-secondary" href="#products">Productos</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-secondary" href="#contact">Contactanos</a></li>
+        <li class="nav-item d-flex gap-2">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="text-secondary"><i class="bi bi-facebook fs-6"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="text-secondary"><i class="bi bi-instagram fs-6"></i></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="text-secondary"><i class="bi bi-linkedin fs-6"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row g-4 align-items-center border-top pt-3">
+      <div class="col-12 col-md-6 col-lg-4">
+        <h6 class="fw-bold mb-2">Contacto</h6>
+        <ul class="list-unstyled small text-secondary mb-0">
+          <li><i class="bi bi-envelope me-2"></i>contacto&#64;havas.com</li>
+          <li><i class="bi bi-telephone me-2"></i>+57 312 530 2472</li>
+          <li><i class="bi bi-geo-alt me-2"></i>Cr7 71-21 Trr A P 12 Bogotá, Distrito Capital</li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-8">
+        <h6 class="fw-bold mb-2">Suscríbete a nuestras noticias</h6>
+        <form class="row g-2" [formGroup]="form" (ngSubmit)="subscribe()">
+          <div class="col-sm-8 col-md-9">
+            <input type="email" class="form-control" formControlName="email" placeholder="Tu correo electrónico">
+            @if (form.get('email')?.touched && form.get('email')?.invalid) {
+              <div class="text-danger small">Ingresa un correo válido</div>
+            }
+          </div>
+          <div class="col-sm-4 col-md-3 d-grid">
+            <button class="btn btn-primary" type="submit">Suscribirme</button>
+          </div>
+          @if (subscribed) {
+            <div class="col-12">
+              <div class="alert alert-success py-2 my-2 small" role="status">Gracias por suscribirte</div>
+            </div>
+          }
+        </form>
+      </div>
+    </div>
+
+    <p class="text-secondary small">&#64;2025 HavaCommerce. Todos los derechos reservados</p>
+  </div>
+</footer>

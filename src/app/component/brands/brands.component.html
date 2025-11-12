@@ -1,0 +1,9 @@
+<section id="brands" class="py-4 bg-white border-top border-bottom">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+      @for (b of items; track b.name) {
+        <img [src]="b.logo" [attr.alt]="b.name" width="100" height="auto" class="opacity-75" loading="lazy">
+      }
+    </div>
+  </div>
+</section>
